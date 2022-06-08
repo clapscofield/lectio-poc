@@ -76,7 +76,6 @@ gulp.task('injectPartial', function () {
 });
 
 
-
 /* inject Js and CCS assets into HTML */
 gulp.task('injectCommonAssets', function () {
   return gulp.src('./**/*.html')
