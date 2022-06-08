@@ -252,6 +252,87 @@
       });
       document.getElementById('sales-legend').innerHTML = SalesChart.generateLegend();
     }
+    if ($("#polar-cluster").length) {
+      var PolarClusterCanvas = $("#polar-cluster").get(0).getContext("2d");
+      var SalesChart = new Chart(PolarClusterCanvas, {
+        type: 'polarArea',
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+          datasets: [{
+            label: 'Cluster 1',
+            data: [0.734862, 1.000000, 1.000000, 1.000000, 1.00000, 1.000000],
+            pointPlacement: 'on',
+            backgroundColor: '#437a67'
+          }, {
+            label: 'Cluster 2',
+            data: [0.000000, 0.000000, 0.000000, 0.000000, 0.00000, 0.000000],
+            pointPlacement: 'on',
+            backgroundColor: '#dd6326'
+          }, {
+            label: 'Cluster 3',
+            data: [1.000000, 0.100402, 0.192465, 0.094475, 0.12652, 0.142789],
+            pointPlacement: 'on',
+            backgroundColor: '#ffb95c'
+          }
+          ]
+        },
+        options: {
+          cornerRadius: 5,
+          responsive: true,
+          maintainAspectRatio: true,
+          layout: {
+            padding: {
+              left: 0,
+              right: 0,
+              top: 20,
+              bottom: 0
+            }
+          },
+          scales: {
+            yAxes: [{
+              display: true,
+              gridLines: {
+                display: true,
+                drawBorder: false,
+                color: "#F2F2F2"
+              },
+              ticks: {
+                display: true,
+                min: 0,
+                max: 560,
+                callback: function(value, index, values) {
+                  return  value + '$' ;
+                },
+                autoSkip: true,
+                maxTicksLimit: 10,
+                fontColor:"#6C7383"
+              }
+            }],
+            xAxes: [{
+              stacked: false,
+              ticks: {
+                beginAtZero: true,
+                fontColor: "#6C7383"
+              },
+              gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+                display: false
+              },
+              barPercentage: 1
+            }]
+          },
+          legend: {
+            display: false
+          },
+          elements: {
+            point: {
+              radius: 0
+            }
+          }
+        },
+      });
+      document.getElementById('polar-legend').innerHTML = SalesChart.generateLegend();
+    }
     if ($("#sales-chart-dark").length) {
       var SalesChartCanvas = $("#sales-chart-dark").get(0).getContext("2d");
       var SalesChart = new Chart(SalesChartCanvas, {
