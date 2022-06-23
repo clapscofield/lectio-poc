@@ -464,21 +464,10 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-6 grid-margin stretch-card">
+              <div class="col-md-6 grid-margin ">
                 <div class="card tale-bg">
                   <div class="card-people mt-auto">
-                    <img src="images/dashboard/people.svg" alt="people" />
-                    <div class="weather-info">
-                      <div class="d-flex">
-                        <div>
-                          <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>31<sup>C</sup></h2>
-                        </div>
-                        <div class="ml-2">
-                          <h4 class="location font-weight-normal">Bangalore</h4>
-                          <h6 class="font-weight-normal">India</h6>
-                        </div>
-                      </div>
-                    </div>
+                    <img src="images/principal.svg" alt="people" width="300" height="300"/>
                   </div>
                 </div>
               </div>
@@ -531,27 +520,15 @@
                   <div class="card-body">
                     <p class="card-title">Avaliação vs Ano de Publicação</p>
                     <p class="font-weight-500">
-                      The total number of sessions within the date range. It is the period time a user is actively
-                      engaged with your website, page or app, etc
+                      Descrição do gráfico e sua importância
+                      A partir das três perspectivas, utiliza-se um algoritmo de clusterização para agrupar as obras em
+                      relação ao nível de sucesso. Aqui, usa-se um algoritmo de agrupamento difuso (i.e., Fuzzy C-means
+                      clustering), onde cada ponto de dados é atribuído a uma probabilidade de pertencer a um
+                      determinado grupo (cluster). Esse grau de pertinência é determinado através da proximidade dos
+                      centros dos clusters. Escolhe-se tal abordagem para que o sucesso de um livro possa ser definido
+                      através das três perspectivas, ao invés de apenas uma só dimensão.
+                      
                     </p>
-                    <div class="d-flex flex-wrap mb-5">
-                      <div class="mr-5 mt-3">
-                        <p class="text-muted">Order value</p>
-                        <h3 class="text-primary fs-30 font-weight-medium">12.3k</h3>
-                      </div>
-                      <div class="mr-5 mt-3">
-                        <p class="text-muted">Orders</p>
-                        <h3 class="text-primary fs-30 font-weight-medium">14k</h3>
-                      </div>
-                      <div class="mr-5 mt-3">
-                        <p class="text-muted">Users</p>
-                        <h3 class="text-primary fs-30 font-weight-medium">71.56%</h3>
-                      </div>
-                      <div class="mt-3">
-                        <p class="text-muted">Downloads</p>
-                        <h3 class="text-primary fs-30 font-weight-medium">34040</h3>
-                      </div>
-                    </div>
                     <div id="scatterAnoAvaliacao"></div>
                   </div>
                 </div>
@@ -1299,6 +1276,10 @@
     <script src="https://code.highcharts.com/modules/organization.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <!-- optional -->
+    <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="js/plots.js"></script>
     <script src="js/generoCluster.js"></script>
 
