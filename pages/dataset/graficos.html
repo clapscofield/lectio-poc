@@ -2,27 +2,27 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Lectio</title>
-  <!-- plugins:css -->
-  <link rel="stylesheet" href="../../vendors/feather/feather.css">
-  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
-  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
-  <!-- endinject -->
-  <!-- Plugin css for this page -->
-  <!-- End plugin css for this page -->
-  <!-- inject:css -->
-  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
-  <!-- endinject -->
-  <link rel="shortcut icon" href="../../images/favicon.png" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Lectio</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../vendors/feather/feather.css">
+    <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../../images/favicon.png" />
 </head>
 
 <body>
-  <div class="container-scroller">
-    <!-- partial:../../partials/_navbar.html -->
-    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+    <div class="container-scroller">
+        <!-- partial:../../partials/_navbar.html -->
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
         <a class="navbar-brand brand-logo mr-5" href="../../index.html"><img src="../../images/logo.svg" class="mr-2" alt="logo"/></a>
         <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="../../images/logo-mini.svg" alt="logo"/></a>
@@ -118,10 +118,10 @@
         </button>
       </div>
     </nav>
-    <!-- partial -->
-    <div class="container-fluid page-body-wrapper">
-      <!-- partial:../../partials/_settings-panel.html -->
-      <div class="theme-setting-wrapper">
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:../../partials/_settings-panel.html -->
+            <div class="theme-setting-wrapper">
         <div id="settings-trigger"><i class="ti-settings"></i></div>
         <div id="theme-settings" class="settings-panel">
           <i class="settings-close ti-close"></i>
@@ -289,9 +289,9 @@
           <!-- chat tab ends -->
         </div>
       </div>
-      <!-- partial -->
-      <!-- partial:../../partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            <!-- partial -->
+            <!-- partial:../../partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
   <ul class="nav">
     <li class="nav-item">
       <a class="nav-link" href="../../index.html">
@@ -427,112 +427,146 @@
     </li>
   </ul>
 </nav>
-      <!-- partial -->
-      <div class="main-panel">
-        <div class="content-wrapper">
-          <div class="row">
-            <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-              <h1 class="font-weight-bold">Análise: Gênero dos livros</h1>
-              <h6 class="font-weight-normal mb-4">
-                texto texto <span class="text-primary">texto</span>
-              </h6>
-            </div>
-            <div class="col-lg-6 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Scatter1</h4>
-                  <div id="scatter1"></div>
+            <!-- partial -->
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <div class="row">
+                        <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                            <h1 class="font-weight-bold">Gráficos Dataset</h1>
+                        </div>
+                        <div class="col-lg-12 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Valores Faltantes</h4>
+                                    <img src="../../images/graficosDataset/valoresFaltantes.png" class="mr-2" alt="logo"
+                                        width="100%" />
+                                    <h5 class="font-weight-normal mb-2 mt-2">
+                                        <b class="text-primary">Análise Gráfico</b> <br />
+                                        Começamos analisando os valores ausentes que não foram tratados na etapa de
+                                        limpeza de dados. Principalmente, apenas as tabelas
+                                        GoodreadsWorks,GoodreadsAuthors e GoodreadsReviews têm dados ausentes, e a
+                                        Figura mostra sua porcentagem (a--c) e distribuição em todas as variáveis (d
+                                        --f). A maioria dos dados ausentes refere-se a datas, que é uma variável
+                                        complexa para lidar quando ausente. Além disso, algumas informações de
+                                        identificação relacionadas a obras também possuem registros incompletos, como
+                                        códigos ISBN/ISBN-13 e ASIN (ASIN significa Amazon Standard Identification
+                                        Number). No geral, a matriz de nulidade (d--f) mostra uma correlação entre a
+                                        maioria das variáveis (ou seja, se uma observação está faltando em uma variável,
+                                        certamente também está faltando na outra), exceto para o código ASIN.
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Correlações entre gêneros</h4>
+                                    <img src="../../images/graficosDataset/correlacoes.png" class="mr-2" alt="logo"
+                                        width="100%" />
+                                    <h5 class="font-weight-normal mb-2 mt-2">
+                                        (a) Desdobramento dos livros coletados em categorias de gênero de Ficção e
+                                        Não-ficção. (b) Matriz de correlação de postos de Spearman das variáveis
+                                        numéricas da tabela Goodreads. Correlações com p-value menor ou igual a 0.05 são
+                                        consideradas insignificantes e deixadas em branco.
+                                    </h5>
+                                    <h5 class="font-weight-normal mb-2 mt-2">
+                                        <b class="text-primary">Análise Gráfico</b> <br />
+                                        Com mais de duas mil obras distintas, o conjunto de dados inclui 80 gêneros
+                                        diferentes classificados nas categorias Ficção ou Não ficção. A Figura (a)
+                                        divide todas as obras coletadas por categoria e depois por gênero. Observe que
+                                        cerca de 70% (54) dos gêneros disponíveis estão presentes no acervo de nossas
+                                        obras. Além disso, a maioria (24%) se enquadra nos gêneros Clássicos, Literatura
+                                        e Romance, todos de ficção. De fato, cerca de 90% dos gêneros de obras no
+                                        conjunto de dados são categorizados como ficção, enquanto os 10% restantes dos
+                                        gêneros de não ficção se enquadram principalmente em História, Filosofia,
+                                        Viagens e Política categorias.
+                                        Em relação à tabela GoodreadsWorks, a Figura (b) apresenta a matriz de
+                                        correlação de postos de Spearman das variáveis ​​numéricas. Existe uma clara
+                                        correlação positiva entre a maioria das medidas de popularidade dos trabalhos,
+                                        incluindo average_rating, ratings_count, text_reviews_count, entre outros. Em
+                                        contrapartida, tais medidas correlacionam-se negativamente com o ano de
+                                        publicação das obras, indicando uma possível preferência por obras clássicas. No
+                                        geral, existem muito poucos atributos numéricos perfeitamente positivos ou
+                                        negativos, reduzindo as chances de multicolinearidade em futuros modelos de
+                                        aprendizado de máquina usando o dataset Lectio.
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Distribuições em boxplot</h4>
+                                    <img src="../../images/graficosDataset/distribuicoes.png" class="mr-2" alt="logo"
+                                        width="100%" />
+                                    <h5 class="font-weight-normal mb-2 mt-2">
+                                        (a) Distribuições do número de obras e fãs para autores de ficção e não ficção.
+                                        (b) Distribuição da duração das resenhas para os 5 principais gêneros de ficção
+                                        e não ficção, respectivamente.
+                                    </h5>
+                                    <h5 class="font-weight-normal mb-2 mt-2">
+                                        <b class="text-primary">Análise Gráfico</b> <br />
+                                        Finalmente, a Figura mostra a distribuição das características dos principais
+                                        autores e das resenhas online. A Figura (a) mostra uma diferença entre o número
+                                        médio de obras de autores de ficção e não-ficção. Apesar do número semelhante de
+                                        obras, os autores de ficção têm uma base de fãs mais extensa em comparação com
+                                        os de não-ficção. Além disso, a Figura (b) mostra que as revisões são mais
+                                        longas para os gêneros Fantasia e Filosofia, embora não sejam muito populares
+                                        dentro do dataset Lectio. Ainda assim, os principais gêneros de Ficção e
+                                        Não-ficção são Clássico e História, respectivamente, que também apresentam, em
+                                        média, longas resenhas.
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-6 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Gêneros</h4>
-                  <div id="barGeneros"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-6 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Supergenre</h4>
-                  <div id="barSupergenre"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Doughnut chart</h4>
-                  <canvas id="doughnutChart"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-6 grid-margin grid-margin-lg-0 stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Pie chart</h4>
-                  <canvas id="pieChart"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 grid-margin grid-margin-lg-0 stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Scatter chart</h4>
-                  <canvas id="scatterChart"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- content-wrapper ends -->
-        <!-- partial:../../partials/_footer.html -->
-        <footer class="footer">
+                <!-- content-wrapper ends -->
+                <!-- partial:../../partials/_footer.html -->
+                <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
             <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022.  Clarisse Scofield.</span>
             <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span>
           </div>
         </footer>
-        <!-- partial -->
-      </div>
-      <!-- main-panel ends -->
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
     </div>
-    <!-- page-body-wrapper ends -->
-  </div>
-  <!-- container-scroller -->
-  <!-- plugins:js -->
-  <script src="../../vendors/js/vendor.bundle.base.js"></script>
-  <!-- endinject -->
-<!-- HIGHCHARTS -->
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../../vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- HIGHCHARTS -->
 
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/highcharts-more.js"></script>
-<script src="https://code.highcharts.com/modules/sankey.js"></script>
-<script src="https://code.highcharts.com/modules/organization.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-<script src="../../js/generoCluster.js"></script>
-<script src="../../js/plots.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/sankey.js"></script>
+    <script src="https://code.highcharts.com/modules/organization.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="../../js/generoCluster.js"></script>
+    <script src="../../js/plots.js"></script>
 
-  <!-- Plugin js for this page -->
-  <script src="../../vendors/chart.js/Chart.min.js"></script>
-  <!-- End plugin js for this page -->
-  <!-- inject:js -->
-  <script src="../../js/off-canvas.js"></script>
-  <script src="../../js/hoverable-collapse.js"></script>
-  <script src="../../js/template.js"></script>
-  <script src="../../js/settings.js"></script>
-  <script src="../../js/todolist.js"></script>
-  <!-- endinject -->
-  <!-- Custom js for this page-->
-  <script src="../../js/chart.js"></script>
-  <!-- End custom js for this page-->
+    <!-- Plugin js for this page -->
+    <script src="../../vendors/chart.js/Chart.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../../js/off-canvas.js"></script>
+    <script src="../../js/hoverable-collapse.js"></script>
+    <script src="../../js/template.js"></script>
+    <script src="../../js/settings.js"></script>
+    <script src="../../js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="../../js/chart.js"></script>
+    <!-- End custom js for this page-->
 </body>
 
 </html>
