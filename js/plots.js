@@ -74,7 +74,7 @@ Highcharts.chart('radarplots', {
       }]
     },
     exporting: {
-      enabled: false
+      enabled: true
     },
     credits: {
       enabled: false

@@ -337,7 +337,7 @@
         </ul>
       </div>
     </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a
         class="nav-link"
         data-toggle="collapse"
@@ -356,8 +356,8 @@
           </li>
         </ul>
       </div>
-    </li>
-    <li class="nav-item">
+    </li> -->
+    <!-- <li class="nav-item">
       <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
         <i class="icon-bar-graph menu-icon"></i>
         <span class="menu-title">Charts</span>
@@ -368,8 +368,8 @@
           <li class="nav-item"><a class="nav-link" href="../../pages/charts/chartjs.html">ChartJs</a></li>
         </ul>
       </div>
-    </li>
-    <li class="nav-item">
+    </li> -->
+    <!-- <li class="nav-item">
       <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
         <i class="icon-grid-2 menu-icon"></i>
         <span class="menu-title">Tables</span>
@@ -418,7 +418,7 @@
           <li class="nav-item"><a class="nav-link" href="../../pages/samples/error-500.html"> 500 </a></li>
         </ul>
       </div>
-    </li>
+    </li> -->
     <li class="nav-item">
       <a class="nav-link" href="../../pages/docs/documentation.html">
         <i class="icon-paper menu-icon"></i>
@@ -482,16 +482,25 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 grid-margin grid-margin-lg-0 stretch-card">
+            <!-- <div class="col-lg-6 grid-margin grid-margin-lg-0 stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Scatter chart</h4>
-                  <canvas id="scatterChart"></canvas>
+                  <h4 class="card-title">Gênero vs Clusters de sucesso</h4>
+                  <id id="generoHeatmap"></id>
+                </div>
+              </div>
+            </div> -->
+          </div>
+          <div class="row mt-4">
+            <div class="col-lg-12 grid-margin grid-margin-lg-0 stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Gênero vs Clusters de sucesso</h4>
+                  <id id="generoHeatmap"></id>
                 </div>
               </div>
             </div>
           </div>
-        </div>
         <!-- content-wrapper ends -->
         <!-- partial:../../partials/_footer.html -->
         <footer class="footer">
@@ -513,6 +522,7 @@
 <!-- HIGHCHARTS -->
 
 <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/heatmap.js"></script>
 <script src="https://code.highcharts.com/highcharts-more.js"></script>
 <script src="https://code.highcharts.com/modules/sankey.js"></script>
 <script src="https://code.highcharts.com/modules/organization.js"></script>
@@ -521,6 +531,7 @@
 <script src="../../js/generoCluster.js"></script>
 <script src="../../js/genero.js"></script>
 <script src="../../js/plots.js"></script>
+<script src="../../js/generoHeatmapCluster.js"></script>
 
   <!-- Plugin js for this page -->
   <script src="../../vendors/chart.js/Chart.min.js"></script>
