@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Lectio Documentação</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../vendors/feather/feather.css">
+    <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <link rel="stylesheet" href="../../vendors/codemirror/codemirror.css">
+    <link rel="stylesheet" href="../../vendors/codemirror/ambiance.css">
+    <link rel="stylesheet" href="../../vendors/pwstabs/jquery.pwstabs.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../../images/favicon.png" />
+</head>
+
+<body>
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+            <div class="main-panel w-100  documentation">
+                <div class="content-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 doc-header">
+                                <a class="btn btn-success btn-sm" href="../../index.html"><i
+                                        class="mdi mdi-home mr-2"></i>Voltar a página inicial</a>
+                                <h3 class="text-primary mt-4">Documentação</h3>
+                            </div>
+                        </div>
+                        <div class="row doc-content">
+                            <div class="col-12 col-md-3 grid-margin doc-table-contents">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h3 class="mb-4">Conteúdos</h3>
+                                        <ul class="list-arrow">
+                                            <li>
+                                                <a href="#doc-intro">Introdução</a>
+                                            </li>
+                                            <!-- <li>
+                                                <a href="#doc-started">Trabalho relacionados</a>
+                                            </li> -->
+                                            <li>
+                                                <a href="#doc-dataset">Dataset PPORTAL</a>
+                                                <ul class="list-arrow">
+                                                    <li>
+                                                        <a href="#doc-criacao">Processo de criação</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#doc-conteudo">Conteúdo</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#doc-formato">Formato e uso</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#doc-desafio">Desafios e limitações</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#doc-analise">Análise exploratória: sucesso literário</a>
+                                            </li>
+                                            <li>
+                                                <a href="#doc-classificacao">Classificação do gênero</a>
+                                                <ul class="list-arrow">
+                                                    <li>
+                                                        <a href="#doc-basic-ui">Basic UI Elements</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#doc-tables">Tables</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#doc-charts">Charts</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#doc-forms">Forms</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#doc-icons">Icons</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#doc-ref">Referências</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-9 offset-md-3 grid-margin">
+                                <div class="col-12 grid-margin" id="doc-intro">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3 class="mb-4">Introdução</h3>
+                                            <p>
+                                                Analisar o sucesso de romances é uma questão de interesse entre
+                                                editores, revisores profissionais de livros, escritores especializados e
+                                                até mesmo leitores curiosos. Nesse sentido, também pode-se dizer que a
+                                                classificação de gêneros literários desempenha um papel essencial para
+                                                essa análise de sucesso, que impacta a indústria do livro como um todo.
+                                                Diante de tantas variáveis, reconhecer uma obra literária de sucesso é
+                                                uma tarefa difícil até mesmo para especialistas do mercado editorial e a
+                                                classificação de gênero é um modo de aprofundar e obter insights sobre o
+                                                sucesso de um livro. Para os editores, pode ajudar associar os
+                                                manuscritos aos leitores de uma editora. Além disso, essa categorização
+                                                ajuda os vendedores a levar os leitores a livros de que possam gostar
+                                                com base em compras anteriores. Por fim, a classificação por gênero não
+                                                apenas ajuda os leitores a encontrar um livro, mas também auxilia na
+                                                identificação dos concorrentes e do público de um livro, impactando
+                                                diretamente tanto no marketing quanto nas vendas.
+                                            </p>
+                                            <p>
+                                                Embora a classificação de gênero seja um tema importante, não é um
+                                                problema trivial, pois não existe um procedimento universal para definir
+                                                ou classificar textos literários. Dada essa falta de padrão, tal tarefa
+                                                tem sido tradicionalmente abordada por meio de um método filológico, ou
+                                                seja, por um pesquisador que lê os materiais impressos e realiza uma
+                                                abstração intuitiva pessoal de generalizações. Ainda,
+                                                sendo um método baseado em critérios externos, as categorias e gêneros
+                                                sugeridos tendem a ser inconsistentes e pouco confiáveis.
+                                            </p>
+                                            <p>
+                                                Por outro lado, com o avanço das técnicas de Processamento de Linguagem
+                                                Natural (PLN) e a alta disponibilidade de obras literárias em formato
+                                                digital, surgem novas abordagens para classificação automatizada de
+                                                gêneros de livros. Uma solução geralmente é: processar o livro inteiro
+                                                ou partes dele, extrair palavras e estrutura textual e, em seguida,
+                                                alimentar tudo em modelos de agrupamento ou classificação. Existem
+                                                também poucos esforços alternativos usando formas mais diretas de
+                                                representar o conteúdo do livro, incluindo resumos de livros
+                                                e descrições curtas.
+                                            </p>
+                                            <p>
+                                                A extensão limitada e a falta de informações necessárias para
+                                                classificar o gênero de um livro são desafios críticos em tais estudos,
+                                                que geralmente se refletem em resultados ineficazes. Para superar tais
+                                                desafios, exploramos a <b>resenhas de livros</b> como um recurso
+                                                valioso para a classificação de gêneros de livros.
+                                            </p>
+                                            <p>
+                                                O objetivo deste trabalho é: avaliar as diferentes
+                                                perspectivas de sucesso e sua relação com os gêneros dos livros;
+                                                desenvolver uma metodologia para a classificação de gênero
+                                                com base nas resenhas dos livros e avaliar os resultados;
+                                                disponibilizar os resultados para o público com a plataforma Lectio.
+                                            </p>
+                                            <p>
+                                                O restante deste artigo está organizado da seguinte maneira. Na próxima
+                                                seção são apresentados os trabalhos relacionados que foram a base de
+                                                pesquisa
+                                                para o desenvolvimento do trabalho. Na Seção 3 é apresentada as
+                                                diferentes perspetivas de sucesso e a exploração dos dados coletados no
+                                                POCI. Logo após, na Seção 4, apresenta-se a metodologia de classificação
+                                                de gênero e o detalhamento das diferentes fases de processamento. Na
+                                                Seção 5, os experimentos e resultados são apresentados para análise da
+                                                classificação realizada e apresenta-se os possíveis motivos das falhas
+                                                ocorridas. Na Seção 6, descreve-se brevemente os detalhes do
+                                                desenvolvimento da plataforma Lectio. Por fim, na Seção 7, são
+                                                apresentadas as conclusões e os trabalhos futuros.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-12 grid-margin" id="doc-started">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3 class="mb-4">Trabalhos relacionados</h3>
+                                            <p>TODO </p>
+                                            <div class="alert alert-success mt-4 d-flex align-items-center"
+                                                role="alert">
+                                                <i class="ti-info-alt"></i>
+                                                <p>We have bundled up the vendor files needed for demo purpose into a
+                                                    folder 'vendors', you may not need all those vendors in your
+                                                    application. If you want to make any change in the vendor package
+                                                    files, you need to change the src path for related tasks in the file
+                                                    gulpfile.js and run the task <code>bundleVendors</code> to rebuild
+                                                    the vendor files.</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <div class="col-12 grid-margin" id="doc-dataset">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3>Dataset PPORTAL</h3>
+                                            <hr class="hr" id="doc-criacao">
+                                            <h4 class="my-4">Processo de criação</h4>
+                                            <b>Web Scrapping</b>
+                                            <p class="mb-5">
+                                                O dataset foi inicialmente criado para apoiar pesquisas sobre tarefas de
+                                                PNL e ML na literatura brasileira e portuguesa. Assim, como fontes de
+                                                dados primárias, consideramos três bibliotecas digitais bem conhecidas
+                                                para obras de domínio público principalmente do Brasil e Portugal:
+                                                Domínio Público, Projecto Adamastor, e Biblioteca Digital de Literatura
+                                                de Países Lusófonos (BLPL). Domínio Público é uma biblioteca digital
+                                                mantida pelo Ministério da Educação do Brasil e inclui obras devidamente
+                                                cedidas pelos detentores dos direitos autorais. O Projecto Adamastor
+                                                recolhe mais de 1.100 títulos em português de várias fontes de dados,
+                                                incluindo Domínio Público. BLPL é um grande banco de dados de literatura
+                                                brasileira e portuguesa disponível abertamente, com mais de 80.000
+                                                títulos. A primeira etapa é implementar um rastreador da web para
+                                                extrair dados brutos automaticamente de todas as três plataformas, já
+                                                que nenhuma delas fornece uma API. Para isso, usamos BeautifulSoup e
+                                                Selenium: duas bibliotecas Python populares para web scraping. Extraímos
+                                                dados tabulares das páginas HTML usando web scrapers específicos, pois
+                                                cada plataforma tem estrutura e formatação exclusivas. Esse processo
+                                                aconteceu entre fevereiro e agosto de 2021. Para o Projecto Adamastor,
+                                                esta fase foi simplesmente realizada de forma simples e direta, por
+                                                extraindo todos os registros de seu banco de dados. O Domínio Público
+                                                oferece quatro tipos de mídia pesquisáveis ​​(texto, imagem, som,
+                                                vídeo), e muitas categorias e idiomas para consulta, que exigiam.
+                                                filtragem para extrair apenas textos referentes à literatura em
+                                                português. O BLPL possui uma forma baseada na seqüência do alfabeto,
+                                                exigindo então a seleção de cada letra para avançar na busca. Além
+                                                disso, como um dos objetivos do dataset é extrair texto de obras
+                                                literárias, criamos um sinalizador binário baseado na disponibilidade
+                                                dos arquivos para download, um recurso distinto do dataset que também
+                                                permite a filtragem de tais documentos. Como resultado, esta etapa
+                                                coletou links para download e metadados de mais de 80.000 obras de
+                                                domínio público.
+                                            </p>
+                                            <b>Integração de dados</b>
+                                            <p class="mb-5">
+                                                O conjunto de dados preliminar fornece informações diferentes e únicas
+                                                para cada fonte de dados, como a vida dos autores (Projecto Adamastor),
+                                                os géneros literários (BLPL) e o número total de acessos (Domínio
+                                                Público). A tabela 1 informa os metadados coletados de cada plataforma.
+                                                Com essas informações heterogêneas, usamos uma fonte de dados adicional
+                                                para integrar e centralizar o conteúdo do conjunto de dados preliminar.
+                                                Escolhemos Goodreads - o maior site do mundo para leitores e
+                                                recomendações de livros, devido ao seu grande volume de dados
+                                                disponíveis e sua API de fácil acesso. Por meio de uma API de interface
+                                                Python, buscamos todos os trabalhos coletados, buscando correspondências
+                                                na plataforma Goodreads. Em particular, os registros do BLPL foram
+                                                pré-filtrados para manter apenas a obra literária e com o arquivo
+                                                disponível para download, reduzindo-o de 79.208 para 6.480 registros
+                                                .Este estágio de integração de dados também requer uma abordagem de
+                                                vinculação de registros, já que cada fonte de dados possui um sistema de
+                                                identificação de livros diferente. Esse problema geralmente é resolvido
+                                                por meio de métodos de correspondência probabilística ou difusa, que
+                                                aplicam funções de similaridade de strings. Aqui, usamos a biblioteca
+                                                Python fuzzywuzzy para mapear os registros de livros que se referem à
+                                                mesma entidade em todos fontes. A biblioteca usa a distância de
+                                                Levenshtein para calcular as diferenças entre duas strings. Com uma
+                                                proporção parcial definida em 75%, o processo de correspondência de
+                                                string difusa gera um resultado incompleto. No total, conseguimos mapear
+                                                cerca de 25 % (ou seja, 2.388 registros de um total de 9.585) dos
+                                                registros iniciais coletados. A tabela 1 apresenta estatísticas sobre
+                                                todo o processo antes Registros com Downloads e depois da integração.
+                                            </p>
+                                            <b>Extração de dados</b>
+                                            <p class="mb-5">
+                                                Os IDs das obras no conjunto de dados integrado Goodreads possibilitaram
+                                                coletar informações do autor e da revisão online. Por meio da mesma API
+                                                Goodreads, coletamos metadados de 966 autores, incluindo nome, cidade
+                                                natal e contagem de fãs. Também criamos outro web scraper para extrair o
+                                                texto das primeiras 30 análises online de cada trabalho. Ao final, foram
+                                                coletadas 4.240 resenhas de 518 trabalhos distintos, além de 1.430
+                                                leitores distintos.
+                                            </p>
+                                            <b>Pré-processamento de dados</b>
+                                            <p class="mb-5">
+                                                As duas últimas etapas do processo são limpeza de dados e engenharia de
+                                                recursos. Embora Goodreads continue sendo uma fonte valiosa de
+                                                informações sobre livros, também é uma fonte de dados do mundo real.
+                                                Como resultado, dados ausentes e barulhentos são inevitáveis, o que
+                                                requer procedimentos de limpeza para lidar com registros corrompidos ou
+                                                imprecisos. Primeiro, lidamos com os dados perdidos descartando
+                                                variáveis ​​irrelevantes e imputando valores perdidos categóricos como
+                                                uma categoria desconhecido. Em seguida, limpamos e tokenizamos o campo
+                                                de descrição do trabalho usando a biblioteca Python re. Também
+                                                analisamos e convertemos alguns campos estruturados em listas, incluindo
+                                                textit {autores}, textit {estantes populares} e textit {livros
+                                                semelhantes}. Finalmente, todos os dados de identificação dos leitores
+                                                de textit {GoodreadsReviews} foram protegidos usando um método de
+                                                anonimato baseado em hash, convertendo-o em um código numérico. Na etapa
+                                                de Engenharia de Recursos, criamos novos recursos a partir dos dados
+                                                existentes coletados. No Goodreads, um livro pode ser armazenado nas
+                                                prateleiras dos usuários e definido usando tags fixas e personalizadas.
+                                                Extraímos tags significativas das estantes populares das obras
+                                                relacionadas ao gênero literário e informações de popularidade (por
+                                                exemplo, número de usuários que rotularam a obra como favorito, para
+                                                leitura e leitura atual. Também criamos alguns recursos quantitativos
+                                                relacionados ao número total de autores, estantes populares e livros
+                                                semelhantes; e agrupou as categorias de formato de trabalho em três:
+                                                textit {físico}, textit {digital} e textit {desconhecido}.
+                                            </p>
+                                            <hr class="hr" id="doc-conteudo">
+                                            <h4 class="my-4">Conteúdo</h4>
+                                            <p class="mb-5">
+                                                O mecanismo de armazenamento usado para dataset é um sistema de
+                                                gerenciamento de banco de dados relacional (RDBMS). A figura do esquema
+                                                mostra seu 12 tabelas divididas em três versões de dataset disponíveis:
+                                                Preliminary, Goodreads e Full. Essa divisão visa atender a diferentes
+                                                aplicações dos usuários finais, facilitando o acesso aos dados que
+                                                realmente lhes interessam. A Figura do esquema também inclui a
+                                                cardinalidade das tabelas principais, enquanto a Tabela X apresenta
+                                                informações quantitativas sobre as versões.Preliminar: A versão
+                                                Preliminar inclui quatro tabelas referentes às três bibliotecas digitais
+                                                e o conjunto de dados preliminar. Conforme mencionado anteriormente,
+                                                cada biblioteca digital apresenta um conjunto de características
+                                                diferentes. Portanto, disponibilizamos cada um separadamente, com o
+                                                PreliminaryDataset} atuando como uma tabela compilada concatenando todos
+                                                os registros por seu ID, a fonte da biblioteca digital e o link para
+                                                download.Goodreads: A versão do Goodreads inclui sete tabelas referentes
+                                                a obras, autores, resenhas online e gêneros literários. Para cada um
+                                                desses elementos do contexto de publicação do livro, existem vários
+                                                metadados disponíveis na API Goodreads e os recursos adicionais gerados
+                                                na etapa de Engenharia de Recursos. Além disso, para representar as
+                                                relações entre tais elementos, criamos três tabelas de junção:
+                                                WorksAuthors, WorksReviews e WorksGenres. Full: Esta versão combina as
+                                                duas primeiras versões e a tabela DigitalLibraryGoodreads, que armazena
+                                                o resultado da integração de dados , resultando em 12 tabelas. </p>
+                                            <hr class="hr" id="doc-formato">
+                                            <h4 class="my-4">Formato e uso</h4>
+                                            <p class="mb-5">O dataset está publicamente disponível em um repositório
+                                                Zenodo de acesso aberto, mas também pode ser baixado na seção de
+                                                download.Como mencionado acima, todos os dados coletados e enriquecidos
+                                                estão disponíveis em três partes separadas versões (Preliminar,
+                                                Goodreads e Completa).Portanto, geramos um arquivo de despejo para cada
+                                                versão que contém a estrutura e o conteúdo do banco de dados, que pode
+                                                ser importado para qualquer servidor MySQL. Como o conjunto de dados
+                                                está estruturado em formato tabular, também disponibilizamos as três
+                                                versões no formato .csv, o que facilitao processamento em notebooks, por
+                                                exemplo.
+                                            </p>
+                                            <hr class="hr" id="doc-desafio">
+                                            <h4 class="my-4">Desafios e limitações</h4>
+                                            <p class="mb-5">O dataset não está livre de desafios, que podem ser
+                                                enfrentados em versões futuras.Nesta seção, discutimos brevemente os
+                                                principais desafios e limitações, que estão principalmente relacionados
+                                                à heterogeneidade das fontes de dados utilizadas no processo de
+                                                coleta.Integração de dados:Ao juntar diferentes conjuntos de dados com
+                                                base em entidades que podem (ou não) compartilhar um identificador
+                                                comum, um método de vinculação de registros é frequentemente necessário,
+                                                o que também foi feito aqui.Aplicamos uma abordagem de correspondência
+                                                difusa, em que pares de registros com probabilidades acima de um certo
+                                                limite foram considerados a mesma entidade.No entanto, embora a lógica
+                                                difusa seja normalmente um método melhor do que a correspondência
+                                                determinística, ela está sujeita a erros de ortografia e deformatação.
+                                                Soluções possíveis: não há muito a fazer em relação a trabalhos que não
+                                                estão realmente presentes no Goodreads, exceto mantê-los apenas
+                                                noconjunto preliminar; e outra opção é pesquisar manualmente no site por
+                                                aqueles mapeados incorretamente.Qualidade de dados:Além de ser o maior
+                                                site do mundo para leitores e recomendações de livros, o Goodreads
+                                                também é uma plataforma de mídia social. Portanto, como qualquer outra
+                                                fonte de dados do mundo real, muito de seu conteúdo disponível é
+                                                imputado por seus usuários, estando então sujeito à imprecisão e à falta
+                                                de informações.Solução possível: para considerar uma fonte de dados
+                                                adicional para tentar imputar o conteúdo incompleto.Gêneros
+                                                distintos:Outro problema decorrente da integração de dados é a distinção
+                                                de gênero entre as fontes de dados, onde apenas duas possuem gêneros
+                                                literários: Projecto Adamastor e BLPL. No primeiro, o campo
+                                                word_category compreende 54 gêneros; enquanto no último,o campo
+                                                work_genre contém 354 gêneros. Ao comparar os dois conjuntos, eles
+                                                compartilham apenas quatro gêneros literários Histórias, Biografia,
+                                                Cartas eMemórias. Solução possível: para considerar abordagens de
+                                                correspondência difusa para encontrar gêneros semelhantes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 grid-margin" id="doc-analise">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3 class="mb-4">Análise exploratória: sucesso literário</h3>
+                                            <p>Pesquisadores têm descrito o sucesso de um livro de diferentes pontos de
+                                                vista, incluindo listas oficiais de best-sellers número de resenhas
+                                                online, contagem de downloads e dados representativos de vendas. Tal
+                                                diversidade é resultado da natureza subjetiva e abstrata do sucesso. De
+                                                fato, o que pode parecer bem-sucedido para algumas pessoas pode não ser
+                                                bem-sucedido para outras. Portanto, propor uma definição única e
+                                                objetiva é uma tarefa desafiadora.Além dos desafios, considerar apenas
+                                                um aspecto para resumir o sucesso de um livro pode levar à perda de
+                                                informações sobre sua natureza abrangente. Assim, para incorporar
+                                                plenamente os critérios de sucesso do livro, propomos uma definição mais
+                                                flexível baseada em três perspectivas distintas: Reputação, Popularidade
+                                                e Interesse. Como resultado, podemos examinar mais profundamente os
+                                                aspectos intrínsecos do que torna um livro bem-sucedido. Descrevemos
+                                                brevemente e indicamos as medidas de sucesso de cada perspectiva
+                                                proposta a seguir.Reputação: A reputação refere-se à importância do
+                                                livro ser avaliado e foi levada em consideração pelos usuários. A
+                                                métrica é a contagem de avaliações feitas para um livro e as avaliações
+                                                médias, sendo os campos do banco de dados rating_count e average_rating,
+                                                respectivamente.Popularidade: A popularidade de um livro é o quanto esse
+                                                livro foi lido e avaliado pelos usuários no texto de forma descritiva.
+                                                Assim, a métrica é a contagem de textos de resenhas, referindo-se ao
+                                                campo text_reviews_count. Interesse: O sucesso de um livro baseado em
+                                                interesse está no quanto os usuários consideram esse livro como um
+                                                favorito, se estão lendo no momento ou pretendem lê-lo. Para analisar
+                                                isso, ele utiliza os campos to_read, current_reading} e favorites.
+
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 grid-margin" id="doc-classificacao">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <!-- New Docs Starts Here -->
+                                            <h3 class="my-4">Components</h3>
+                                            <hr class="hr" id="doc-basic-ui">
+                                            <h4 class="my-4">Basic UI Elements</h4>
+                                            <div class="demo-tabs">
+                                                <!-- Tabs Starts -->
+                                                <div data-pws-tab="Button" data-pws-tab-name="Button">
+                                                    <h5 class="mb-2 mt-4">Button with the single color</h5>
+                                                    <div class="fluid-container py-4">
+                                                        <button type="button" class="btn btn-primary">Primary</button>
+                                                        <button type="button"
+                                                            class="btn btn-secondary">Secondary</button>
+                                                        <button type="button" class="btn btn-success">Success</button>
+                                                        <button type="button" class="btn btn-info">Info</button>
+                                                        <button type="button" class="btn btn-warning">Warning</button>
+                                                        <button type="button" class="btn btn-danger">Danger</button>
+                                                    </div>
+                                                    <textarea class="multiple-codes">
+<div class="row">
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+</div>
+                                  </textarea>
+                                                    <h5 class="mb-2 mt-4">Outlined</h5>
+                                                    <div class="fluid-container py-4">
+                                                        <button type="button"
+                                                            class="btn btn-outline-primary">Primary</button>
+                                                        <button type="button"
+                                                            class="btn btn-outline-secondary">Secondary</button>
+                                                        <button type="button"
+                                                            class="btn btn-outline-success">Success</button>
+                                                        <button type="button" class="btn btn-outline-info">Info</button>
+                                                        <button type="button"
+                                                            class="btn btn-outline-warning">Warning</button>
+                                                        <button type="button"
+                                                            class="btn btn-outline-danger">Danger</button>
+                                                    </div>
+                                                    <textarea class="multiple-codes">
+<div class="row">
+  <button type="button" class="btn btn-outline-primary">Primary</button>
+  <button type="button" class="btn btn-outline-secondary">Secondary</button>
+  <button type="button" class="btn btn-outline-success">Success</button>
+  <button type="button" class="btn btn-outline-info">Info</button>
+  <button type="button" class="btn btn-outline-warning">Warning</button>
+  <button type="button" class="btn btn-outline-danger">Danger</button>
+</div>
+                                  </textarea>
+                                                    <h5 class="mb-2 mt-4">Sizes</h5>
+                                                    <div class="fluid-container py-4">
+                                                        <button type="button"
+                                                            class="btn btn-primary btn-lg">Large</button>
+                                                        <button type="button" class="btn btn-primary">Medium</button>
+                                                        <button type="button"
+                                                            class="btn btn-primary btn-sm">Small</button>
+                                                    </div>
+                                                    <textarea class="multiple-codes">
+<div class="row">
+  <button type="button" class="btn btn-primary btn-lg">Small</button>
+  <button type="button" class="btn btn-secondary">Medium</button>
+  <button type="button" class="btn btn-success btn-sm">Large</button>
+</div>
+                                  </textarea>
+                                                </div>
+                                                <!-- Tabs Ends -->
+                                                <!-- Tabs Starts -->
+                                                <div data-pws-tab="Dropdown" data-pws-tab-name="Dropdown">
+                                                    <h5 class="mb-2 mt-4">Bootstrap Dropdown</h5>
+                                                    <div class="fluid-container py-4">
+                                                        <div class="btn-group">
+                                                            <button type="button"
+                                                                class="btn btn-primary dropdown-toggle"
+                                                                data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                Action
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                <a class="dropdown-item" href="#">Something else
+                                                                    here</a>
+                                                                <div class="dropdown-divider"></div>
+                                                                <a class="dropdown-item" href="#">Separated link</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn-group">
+                                                            <button type="button"
+                                                                class="btn btn-secondary dropdown-toggle"
+                                                                data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                Action
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                <a class="dropdown-item" href="#">Something else
+                                                                    here</a>
+                                                                <div class="dropdown-divider"></div>
+                                                                <a class="dropdown-item" href="#">Separated link</a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="btn-group">
+                                                            <button type="button"
+                                                                class="btn btn-success dropdown-toggle"
+                                                                data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                Action
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                <a class="dropdown-item" href="#">Something else
+                                                                    here</a>
+                                                                <div class="dropdown-divider"></div>
+                                                                <a class="dropdown-item" href="#">Separated link</a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="btn-group">
+                                                            <button type="button"
+                                                                class="btn btn-warning dropdown-toggle"
+                                                                data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                Action
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                <a class="dropdown-item" href="#">Something else
+                                                                    here</a>
+                                                                <div class="dropdown-divider"></div>
+                                                                <a class="dropdown-item" href="#">Separated link</a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn btn-danger dropdown-toggle"
+                                                                data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                Action
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                <a class="dropdown-item" href="#">Something else
+                                                                    here</a>
+                                                                <div class="dropdown-divider"></div>
+                                                                <a class="dropdown-item" href="#">Separated link</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <textarea class="multiple-codes">
+<div class="btn-group">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+<div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+  <a class="dropdown-item" href="#">Action</a>
+  <a class="dropdown-item" href="#">Another action</a>
+  <a class="dropdown-item" href="#">Something else here</a>
+  <div class="dropdown-divider"></div>
+  <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+                                  </textarea>
+                                                    <h5 class="mb-2 mt-4">Dropdown Outlined</h5>
+                                                    <div class="fluid-container py-4">
+                                                        <div class="btn-group">
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary dropdown-toggle"
+                                                                data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                Action
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                <a class="dropdown-item" href="#">Something else
+                                                                    here</a>
+                                                                <div class="dropdown-divider"></div>
+                                                                <a class="dropdown-item" href="#">Separated link</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn-group">
+                                                            <button type="button"
+                                                                class="btn btn-outline-secondary dropdown-toggle"
+                                                                data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                Action
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                <a class="dropdown-item" href="#">Something else
+                                                                    here</a>
+                                                                <div class="dropdown-divider"></div>
+                                                                <a class="dropdown-item" href="#">Separated link</a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="btn-group">
+                                                            <button type="button"
+                                                                class="btn btn-outline-success dropdown-toggle"
+                                                                data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                Action
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                <a class="dropdown-item" href="#">Something else
+                                                                    here</a>
+                                                                <div class="dropdown-divider"></div>
+                                                                <a class="dropdown-item" href="#">Separated link</a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="btn-group">
+                                                            <button type="button"
+                                                                class="btn btn-outline-warning dropdown-toggle"
+                                                                data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                Action
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                <a class="dropdown-item" href="#">Something else
+                                                                    here</a>
+                                                                <div class="dropdown-divider"></div>
+                                                                <a class="dropdown-item" href="#">Separated link</a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="btn-group">
+                                                            <button type="button"
+                                                                class="btn btn-outline-danger dropdown-toggle"
+                                                                data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                Action
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#">Action</a>
+                                                                <a class="dropdown-item" href="#">Another action</a>
+                                                                <a class="dropdown-item" href="#">Something else
+                                                                    here</a>
+                                                                <div class="dropdown-divider"></div>
+                                                                <a class="dropdown-item" href="#">Separated link</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <textarea class="multiple-codes">
+<div class="btn-group">
+  <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+<div class="btn-group">
+  <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+  <a class="dropdown-item" href="#">Action</a>
+  <a class="dropdown-item" href="#">Another action</a>
+  <a class="dropdown-item" href="#">Something else here</a>
+  <div class="dropdown-divider"></div>
+  <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-outline-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-outline-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Action
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+                                </textarea>
+                                                </div>
+                                                <!-- Tabs Ends -->
+                                            </div>
+                                            <!-- demo-tabs container ends -->
+
+                                            <!-- New Docs Ends Here -->
+                                            <!-- New Docs Starts Here -->
+
+                                            <!-- New Docs Ends Here -->
+                                            <!-- New Docs Starts Here -->
+
+                                            <hr class="hr" id="doc-advanced-ui">
+                                            <h4 class="my-4">Advanced UI Elements</h4>
+                                            <div class="demo-tabs">
+                                                <!-- Tabs Starts -->
+                                                <div data-pws-tab="Clipboard" data-pws-tab-name="Clipboard">
+                                                    <p>
+                                                        <a href="https://clipboardjs.com/">Clipboard</a>, a modern
+                                                        approach to copy text to the clipboard.
+                                                    </p>
+                                                    <h4 class="mt-5 mb-4">Usage</h4>
+                                                    <p>
+                                                        Add the following script files in &lt;body&gt;.
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<script src="path-to/node_modules/clipboard/dist/clipboard.min.js"></script>
+                                  </textarea>
+                                                    <p>
+                                                        To create a clipboard, add the following code:
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<textarea id="clipboardExample2" class="form-control">Hello&lt;/textarea&gt;
+<button type="button" class="btn btn-primary btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#clipboardExample2">Copy</button>
+<button type="button" class="btn btn-danger btn-clipboard" data-clipboard-action="cut" data-clipboard-target="#clipboardExample2">Cut</button>
+
+<script>
+var clipboard = new Clipboard('.btn-clipboard');
+clipboard.on('success', function(e) {
+  console.log(e);
+});
+clipboard.on('error', function(e) {
+  console.log(e);
+});
+</script>
+                                  </textarea>
+                                                </div>
+                                                <!-- Tabs Ends -->
+                                                <!-- Tabs Starts -->
+                                                <div data-pws-tab="TodoList" data-pws-tab-name="Todo List">
+                                                    <p>
+                                                        <a
+                                                            href="http://www.jqueryscript.net/demo/Minimal-To-do-List-Task-Manager-App-Using-jQuery-Local-Storage/">Todolist</a>
+                                                        is a minimal jQuery plugin to create checklist.
+                                                    </p>
+                                                    <h4 class="mt-5 mb-4">Usage</h4>
+                                                    <p>
+                                                        Add the following script files in &lt;body&gt;.
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<script src="path-to/js/todolist.js"></script>
+                                  </textarea>
+                                                    <p>
+                                                        To create a filterable list, add the following code:
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<div class="add-items d-flex">
+  <input type="text" class="form-control todo-list-input"  placeholder="What do you need to do today?">
+  <button class="add btn btn-primary font-weight-bold todo-list-add-btn" id="add-task">Add</button>
+</div>
+<div class="list-wrapper">
+  <ul class="d-flex flex-column-reverse todo-list">
+    <li>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="checkbox" type="checkbox">
+          Meeting with Alisa
+        </label>
+      </div>
+      <i class="remove ti-close"></i>
+    </li>
+    <li>
+      ...
+    </li>
+    <li>
+      ...
+    </li>
+    <li>
+      ...
+    </li>
+  </ul>
+</div>
+                                  </textarea>
+                                                </div>
+                                                <!-- Tabs Ends -->
+                                                <!-- Tabs Starts -->
+                                                <div data-pws-tab="Dragula" data-pws-tab-name="Dragula">
+                                                    <p>
+                                                        <a href="https://bevacqua.github.io/dragula/">Dragula</a> ,Drag
+                                                        and drop so simple it hurts.
+                                                    </p>
+                                                    <h4 class="mt-5 mb-4">Usage</h4>
+                                                    <p>
+                                                        To use Dragula in your application, include the following files
+                                                        in &lt;head&gt;.
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<link rel="stylesheet" href="path-to/node_modules/dragula/dist/dragula.min.css" />
+                                  </textarea>
+                                                    <p>
+                                                        Add the following script files in &lt;body&gt;.
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<script src="path-to/node_modules/dragula/dist/dragula.min.js"></script>
+                                  </textarea>
+                                                    <p>
+                                                        To create a drag n drop list, add the following code:
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<div id="dragula-event-left" class="h-100">
+  <div>
+  Drag me!
+  </div>
+</div>
+<div id="dragula-event-right" class="h-100">
+  <div>
+  Drag me!
+  </div>
+</div>
+
+<script>
+(function($) {
+  dragula([document.getElementById("dragula-left"), document.getElementById("dragula-right")]);
+  dragula([document.getElementById("dragula-event-left"), document.getElementById("dragula-event-right")])
+  .on('drop', function(el) {
+    el.className += ' bg-danger';
+  })
+})(jQuery);
+</script>
+                                </textarea>
+                                                </div>
+                                                <!-- Tabs Ends -->
+                                                <!-- Tabs Starts -->
+                                                <div data-pws-tab="context-menu" data-pws-tab-name="ContextMenu">
+                                                    <p>
+                                                        The contextMenu Plugin was designed for web applications in need
+                                                        of menus on a possibly large amount of objects. <a
+                                                            target="_blank"
+                                                            href="https://swisnl.github.io/jQuery-contextMenu/">Click
+                                                            Here</a> to see the official documentation.
+                                                    </p>
+                                                </div>
+                                                <!-- Tabs Ends -->
+                                                <!-- Ui-slider Starts -->
+                                                <div data-pws-tab="UISlider" data-pws-tab-name="UI Slider">
+                                                    <p>
+                                                        <a href="https://refreshless.com/nouislider/">noUiSlider</a> is
+                                                        a range slider without bloat.
+                                                    </p>
+                                                    <h4 class="mt-5 mb-4">Usage</h4>
+                                                    <p>
+                                                        To use NoUISlider in your application, include the following
+                                                        files in &lt;head&gt;.
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<link rel="stylesheet" href="path-to/node_modules/nouislider/distribute/nouislider.min.css" /></textarea>
+                                                    <p>
+                                                        Add the following script files in &lt;body&gt;.
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<script src="path-to/node_modules/nouislider/distribute/nouislider.min.js"></script></textarea>
+                                                    <p>
+                                                        To create a slider, add the following code:
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<div id="ui-slider" class="slider"></div>
+
+<script>
+var startSlider = document.getElementById('ui-slider');
+noUiSlider.create(startSlider, {
+start: [20, 80],
+range: {
+  'min': [0],
+  'max': [100]
+}
+});
+</script></textarea>
+                                                </div>
+                                                <!-- Ui slider Ends -->
+                                                <!-- Tabs Starts -->
+                                                <div data-pws-tab="Range-slider" data-pws-tab-name="Range Slider">
+                                                    <p>
+                                                        Easy, flexible and responsive range slider with skin support. <a
+                                                            target="_blank"
+                                                            href="http://ionden.com/a/plugins/ion.rangeSlider/en.html">Click
+                                                            Here</a> to see the official documentation.
+                                                    </p>
+                                                </div>
+                                                <!-- Tabs Ends -->
+                                                <!-- Tabs Starts -->
+                                                <div data-pws-tab="Colgade" data-pws-tab-name="Colcade Grid">
+                                                    <p>
+                                                        <a href="https://github.com/desandro/colcade">Colcade</a> is a
+                                                        simple lightweight masonry layout.
+                                                    </p>
+                                                    <h4 class="mt-5 mb-4">Usage</h4>
+                                                    <p>
+                                                        Add the following script files in &lt;body&gt;.
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<script src="path-to/node_modules/colcade/colcade.js"></script>
+                                        </textarea>
+                                                    <p>
+                                                        To create a responsive, add the following code:
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<div class="grid">
+  <div class="grid-col grid-col--1"></div>
+  <div class="grid-col grid-col--2"></div>
+  <div class="grid-col grid-col--3"></div>
+  <div class="grid-col grid-col--4"></div>
+  <div class="grid-item grid-item--b"></div>
+  <div class="grid-item grid-item--a"></div>
+  <div class="grid-item grid-item--c"></div>
+  <div class="grid-item grid-item--a"></div>
+  <div class="grid-item grid-item--a"></div>
+  <div class="grid-item grid-item--b"></div>
+  <div class="grid-item grid-item--c"></div>
+  <div class="grid-item grid-item--c"></div>
+</div>
+
+<script>
+var colcade = new Colcade('.grid', {
+  columns: '.grid-col',
+  items: '.grid-item'
+});
+</script>
+                                        </textarea>
+                                                </div>
+                                                <!-- Tabs Ends -->
+                                            </div>
+                                            <!-- demo-tabs container ends -->
+
+                                            <!-- New Docs Starts Here -->
+
+                                            <hr class="hr" id="doc-media">
+                                            <h4 class="my-4">Media</h4>
+                                            <div class="demo-tabs">
+                                                <!-- Tabs Starts -->
+                                                <div data-pws-tab="LightBox" data-pws-tab-name="Lightbox">
+                                                    <p>
+                                                        <a href="http://sachinchoolur.github.io/lightGallery/">Light
+                                                            Gallery</a> is a customizable, modular, responsive, Lightbox
+                                                        gallery plugin for jQuery.
+                                                    </p>
+                                                    <h4 class="mt-5 mb-4">Usage</h4>
+                                                    <p>
+                                                        To use LightGallery in your application, include the following
+                                                        files in &lt;head&gt;.
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<link rel="stylesheet" href="path-to/node_modules/lightgallery/dist/css/lightgallery.min.css">
+                                  </textarea>
+                                                    <p>
+                                                        Add the following script files in &lt;body&gt;.
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<script src="path-to/node_modules/lightgallery/dist/js/lightgallery-all.min.js"></script>
+                                  </textarea>
+                                                    <p>
+                                                        To create Lightbox Gallery, add the following code:
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<div id="gallery" class="row lightGallery">
+  <a class="image-tile col-xl-3 col-lg-3 col-md-3 col-md-4 col-6" href="http://via.placeholder.com/690x580">
+    <img src="http://via.placeholder.com/280x280" />
+  </a>
+  <a class="image-tile col-xl-3 col-lg-3 col-md-3 col-md-4 col-6" href="http://via.placeholder.com/690x580">
+    <img src="http://via.placeholder.com/280x280" />
+  </a>
+  <a class="image-tile col-xl-3 col-lg-3 col-md-3 col-md-4 col-6" href="http://via.placeholder.com/690x580">
+    <img src="http://via.placeholder.com/280x280" />
+  </a>
+  <a class="image-tile col-xl-3 col-lg-3 col-md-3 col-md-4 col-6" href="http://via.placeholder.com/690x580">
+    <img src="http://via.placeholder.com/280x280" />
+  </a>
+  <a class="image-tile col-xl-3 col-lg-3 col-md-3 col-md-4 col-6" href="http://via.placeholder.com/690x580">
+    <img src="http://via.placeholder.com/280x280" />
+  </a>
+</div>
+
+<script>
+$("#lightgallery").lightGallery();
+</script>
+                                </textarea>
+                                                </div>
+                                                <!-- Tabs Ends -->
+                                                <!-- Tabs Starts -->
+                                                <div data-pws-tab="owl-carousel" data-pws-tab-name="Owl Carousel">
+                                                    <p>
+                                                        <a href="https://owlcarousel2.github.io/OwlCarousel2/">Owl
+                                                            Carousel</a> is a touch enabled jQuery plugin that lets you
+                                                        create a beautiful responsive carousel slider.
+                                                    </p>
+                                                    <h4 class="mt-5 mb-4">Usage</h4>
+                                                    <p>
+                                                        To use Owl Carousel in your application, include the following
+                                                        files in &lt;head&gt;.
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<link rel="stylesheet" href="path-to/node_modules/owl-carousel-2/assets/owl.carousel.min.css" />
+                                  </textarea>
+                                                    <p>
+                                                        Add the following script files in &lt;body&gt;.
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<script src="path-to/node_modules/owl-carousel-2/owl.carousel.min.js"></script>
+                                  </textarea>
+                                                    <p>
+                                                        To create a carousel, add the following code:
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<div class="owl-carousel owl-theme nonloop">
+  <div class="item"><h4>1</h4></div>
+  <div class="item"><h4>2</h4></div>
+  <div class="item"><h4>3</h4></div>
+  <div class="item"><h4>4</h4></div>
+  <div class="item"><h4>5</h4></div>
+  <div class="item"><h4>6</h4></div>
+  <div class="item"><h4>7</h4></div>
+  <div class="item"><h4>8</h4></div>
+  <div class="item"><h4>9</h4></div>
+  <div class="item"><h4>10</h4></div>
+  <div class="item"><h4>11</h4></div>
+  <div class="item"><h4>12</h4></div>
+</div>
+
+<script>
+$('.owl-carousel').owlCarousel();
+</script></textarea>
+                                                </div>
+                                                <!-- Tabs Ends -->
+                                            </div>
+                                            <!-- demo-tabs container ends -->
+                                            <!--Tables starts-->
+                                            <hr class="hr" id="doc-tables">
+                                            <h4 class="my-4">Tables</h4>
+                                            <div class="demo-tabs">
+                                                <!-- Basic table starts -->
+                                                <div data-pws-tab="basic-table" data-pws-tab-name="Basic table">
+                                                    <p>
+                                                        To create a basic Twitter Bootstrap table, add the following
+                                                        code.
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<table class="table">
+  <thead>
+  <tr class="">
+    <th>#</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Username</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td scope="row">2</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <td scope="row">3</td>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+</textarea>
+                                                </div>
+                                                <!-- Basic table Ends -->
+                                            </div>
+                                            <!--Tables ends-->
+
+                                            <!-- New Docs Starts Here -->
+                                            <!-- New Docs Ends Here -->
+                                            <hr class="hr" id="doc-charts">
+                                            <h4 class="my-4">Charts</h4>
+                                            <div class="demo-tabs">
+                                                <div data-pws-tab="anynameyouwant1" data-pws-tab-name="Chart.js">
+                                                    <p>
+                                                        <a href="http://www.chartjs.org/">Chart.js</a> is a simple yet
+                                                        flexible JavaScript charting for designers & developers.
+                                                    </p>
+                                                    <h4 class="mt-5 mb-4">Usage</h4>
+                                                    <p>
+                                                        To use Chart.js in your application, include the following files
+                                                        in &lt;head&gt;.
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<link rel="stylesheet" href="path-to/node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css" /></textarea>
+                                                    <p>
+                                                        and the following script files in &lt;body&gt;.
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<script src="path-to/node_modules/chart.js/dist/Chart.min.js"></script></textarea>
+                                                    <p>
+                                                        To create a simple chart, add the following code:
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<canvas id="lineChart" height="250"></canvas>
+
+<script>
+  var data = {
+      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+      datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+              'rgba(255,99,132,1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+      }]
+  };
+  var options = {
+      scales: {
+          yAxes: [{
+              ticks: {
+                  beginAtZero:true
+              }
+          }]
+      },
+      legend: {
+          display: false
+      },
+      elements: {
+        point: {
+            radius: 0
+        }
+      }
+
+  };
+  if($("#lineChart").length) {
+    var lineChartCanvas = $("#lineChart").get(0).getContext("2d");
+    var lineChart = new Chart(lineChartCanvas, {
+      type: 'line',
+      data: data,
+      options: options
+    });
+  }
+</script></textarea>
+                                                </div>
+                                            </div>
+                                            <!--Forms starts-->
+                                            <hr class="hr" id="doc-forms">
+                                            <h4 class="my-4">Forms</h4>
+                                            <div class="demo-tabs">
+                                                <!-- Basic elements Starts -->
+                                                <div data-pws-tab="basic-elements" data-pws-tab-name="Basic elements">
+                                                    <p>
+                                                        The basic form elements can be added to your application as
+                                                        below:
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<form class="forms-sample">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control p-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted text-success"><span class="fa fa-info mt-1"></span>&nbsp; We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control p-input" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <label for="exampleTextarea">Example textarea</label>
+        <textarea class="form-control p-input" id="exampleTextarea" rows="3">&lt;/textarea&gt;
+    </div>
+    <div class="form-group">
+        <label for="exampleInputFile">File input</label>
+        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+        <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+    </div>
+    <fieldset class="form-group">
+        <legend class="mb-4 mt-5">Radio buttons</legend>
+        <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+              Option one is this and that&mdash;be sure to include why it's great
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+              Option two can be something else and selecting it will deselect option one
+            </label>
+        </div>
+        <div class="form-check disabled">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+              Option three is disabled
+            </label>
+        </div>
+    </fieldset>
+    <div class="form-check col-12">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input">
+          Check me out
+        </label>
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form></textarea>
+                                                </div>
+                                                <!-- Basic elements Ends -->
+                                            </div>
+                                            <!--Forms ends-->
+
+                                            <!--Icons starts-->
+                                            <hr class="hr" id="doc-icons">
+                                            <h4 class="my-4">Icons</h4>
+                                            <div class="demo-tabs">
+                                                <!-- MDI icon Starts -->
+                                                <div data-pws-tab="mdi-icon" data-pws-tab-name="Material Icons">
+                                                    <p>
+                                                        <a href="https://materialdesignicons.com/">Material Design
+                                                            Icons</a> growing icon collection allows designers and
+                                                        developers targeting various platforms to download icons in the
+                                                        format, color and size they need for any project.
+                                                    </p>
+                                                    <h4 class="mt-5 mb-4">Usage</h4>
+                                                    <p>
+                                                        To use Material Design Icons in your application, include the
+                                                        following files in &lt;head&gt;.
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<link rel="stylesheet" href="path-to/node_modules/mdi/css/materialdesignicons.min.css"/></textarea>
+                                                    <p>
+                                                        To generate an icon, add the following code:
+                                                    </p>
+                                                    <textarea class="multiple-codes">
+<i class="ti-bell"></i>
+                                      </textarea>
+                                                </div>
+                                                <!-- MDI icon Ends -->
+                                            </div>
+                                            <!--icons ends-->
+                                        </div> <!-- Card Block Ends Here -->
+                                    </div>
+                                </div>
+                                <div class="col-12 grid-margin doc-credits" id="doc-ref">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3 class="my-4">Referências</h3>
+                                            <p>[1] Hasan Akalp, Enes Furkan Cigdem, Seyma Yilmaz, Necva Bölücü, and
+                                                Burcu Can. Language representation models for music genre classification
+                                                using lyrics. In ISEEIE - International Symposium on Electrical,
+                                                Electronics and Information Engineering, pages 408-414, Seoul, Republic
+                                                of Korea,
+                                                2021. ACM. https://doi.org/10.1145/3459104.3459171. [2] Edgar Altszyler,
+                                                Mariano Sigman, and Diego Fernández Slezak. Compara
+                                                tive study of lsa vs word2vec embeddings in small corpora: a case study
+                                                in
+                                                dreams database. 10 2016. [3] Vikas Ganjigunte Ashok, Song Feng, and
+                                                Yejin Choi. Success with style:
+                                                Using writing style to predict the success of novels. In Proceedings of
+                                                the 2013 conference on empirical methods in natural language processing,
+                                                pages
+                                                1753-1764, 2013. [4] Leonardo Gabiato Catharin and Valéria Delisandra
+                                                Feltrim. Finding opi
+                                                nion targets in news comments and book reviews. In Aline Villavicencio
+                                                et al., editors, Int'l Conf Computational Processing of the Portuguese
+                                                Language (PROPOR), volume 11122 of LNCS, pages 375–384, Canela, Brazil,
+                                                2018. Springer. https://doi.org/10.1007/978-3-319-99722-3_38. [5] Judith
+                                                A. Chevalier and Dina Mayzlin. The effect of word of mouth on
+                                                sales: Online book reviews. Journal of Marketing Research,
+                                                43(3):345–354,
+                                                2006. https://doi.org/10.1509/jmkr.43.3.345. [6] Michel Clement, Dennis
+                                                Proppe, and Armin Rott. Do critics make bestsel
+                                                lers? opinion leaders and the success of books. Journal of Media
+                                                Economics,
+                                                20(2):77-105, 2007. https://doi.org/10.1080/08997760701193720. [7] Pedro
+                                                Henrique Luz de Araujo, Teófilo E de Campos, Renato RR de Oli
+                                                veira, Matheus Stauffer, Samuel Couto, and Paulo Bermejo. Lener-br: a
+                                                dataset for named entity recognition in brazilian legal text. In Int'l
+                                                Conf. on Computational Processing of the Portuguese Language, pages
+                                                313–323.
+                                                Springer, 2018. [8] Susan T. Dumais, George W. Furnas, Thomas K.
+                                                Landauer, Scott C. De
+                                                erwester, and Richard A. Harshman. Using latent semantic analysis to
+                                                improve access to textual information. In SIGCHI Conference on Human
+                                                Factors in Computing Systems, pages 281–285, Washington, D.C., USA,
+                                                1988. ACM. https://doi.org/10.1145/57167.57214. [9] Alain d'Astous,
+                                                Francois Colbert, and Imene Mbarek. Factors influencing
+                                                readers' interest in new book releases: An experimental study. Poetics,
+                                                34
+                                                (2):134–147, 2006. https://doi.org/10.1016/j.poetic. 2005.12.001. [10]
+                                                Cláudia Freitas, Eduardo Motta, Ruy Milidiú, and Juliana César.
+                                                Sparkling
+                                                vampire... lol! annotating opinions in a book review corpus. In Sandra
+                                                Maria Aluisio and Stella E Tagnin, editors, New Language Technologies
+                                                and Linguistic Research: A Two-Way Road, pages 128–146. Cambridge
+                                                Scholars Publishing, Newcastle upon Tyne, UK, 2014. ISBN 978-1443853774.
+
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <div class="w-100 clearfix">
+                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018 <a
+                                href="http://www.bootstrapdash.com/" target="_blank">Bootstrapdash</a>. All rights
+                            reserved.</span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made
+                            with <i class="ti-heart text-danger ml-1"></i></span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <!-- plugins:js -->
+    <script src="../../vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <script src="../../vendors/codemirror/codemirror.js"></script>
+    <script src="../../vendors/codemirror/javascript.js"></script>
+    <script src="../../vendors/codemirror/shell.js"></script>
+    <script src="../../vendors/pwstabs/jquery.pwstabs.min.js"></script>
+    <!-- End Plugin js for this page-->
+    <!-- inject:js -->
+    <script src="../../js/off-canvas.js"></script>
+    <script src="../../js/hoverable-collapse.js"></script>
+    <script src="../../js/template.js"></script>
+    <script src="../../js/settings.js"></script>
+    <script src="../../js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="../../js/codeEditor.js"></script>
+    <script src="../../js/tabs.js"></script>
+    <script src="../../js/tooltips.js"></script>
+    <script src="documentation.js"></script>
+    <!-- End custom js for this page-->
+</body>
+
+</html>
